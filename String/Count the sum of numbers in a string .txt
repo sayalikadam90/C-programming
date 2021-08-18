@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+int main()
+{
+    char str[50];
+    int sum=0;
+    
+    cout<<"Enter a string ";
+    cin>>str;
+    
+    for(int i=0;str[i]!='\0';i++)
+    {
+        if((str[i]>='0') && (str[i]<='9'))
+        {
+
+            sum=sum+(str[i]-'0');
+        }
+    }
+    
+    cout<<sum;
+}

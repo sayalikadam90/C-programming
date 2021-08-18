@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+
+double power(double a,double b){
+    
+    double result=a;
+    for(int i=1;i<b;i++){
+        
+        result=result*a;
+        
+    }
+    
+    return result;
+    
+}
+
+int main()
+{
+   
+   double a,b;
+   
+   cout<<"Enter base : ";
+   cin>>a;
+   
+   cout<<"Enter power : ";
+   cin>>b;
+   
+   cout<<power(a,b);
+   
+   
+}
+

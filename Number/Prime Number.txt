@@ -1,0 +1,34 @@
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+
+int main(){
+    
+    int i,num;
+    int count=0;
+    
+    cout<<"Enter a number : ";
+    cin>>num;
+    
+    for(int i=1;i<=num;i++){
+        
+        if(num%i==0){
+            
+            count++;                    //Here we are using count because we have to count how many times num%i==0 if
+                                        //it is two times then it is prime as prime num are divisible by itself and 1.
+            
+        }
+    }
+    
+    
+    if(cout==2){
+        
+        cout<<"Number is prime ";
+        
+    }
+    
+    else{
+        
+        cout<<"Number is not prime";
+    }
+}

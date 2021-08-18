@@ -1,0 +1,43 @@
+             *
+           *   *
+         *   *    *
+      *   *    *     *
+    *   *    *    *      *
+
+
+
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+
+int main()
+{
+    
+    int row,column,space;
+   
+    
+    for(row=1;row<=5;row++){
+        
+        for(space=1;space<=5-row;space++){
+            
+            cout<<" ";
+            
+        }
+            
+            for(column=1;column<=row;column++){
+                
+                cout<<" * ";
+        }
+            
+            
+        cout<<"\n";
+    }
+    
+    
+            
+       
+    
+}
+
+
+       

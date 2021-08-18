@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int i;
+    char ch;
+    
+    //To print character value
+    
+    cout<<"Enter a value : ";
+    cin>>i;
+    cout<<"Asciii value is : "<<char(i)<<endl;
+    
+    
+    // To print number
+    
+    cout<<"Enter character : ";
+    cin>>ch;
+    cout<<"Asciii value of character is : "<<int(ch);
+    
+}

@@ -1,0 +1,30 @@
+A
+AB
+ABC
+ABCD
+ABCDE
+
+
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    
+    int row,column;
+    int var=64;
+    
+    for(row=1;row<=5;row++){
+        
+        for(column=1;column<=row;column++){
+            
+            cout<<char(column+char(var));
+        }
+        
+        cout<<"\n";
+    }
+    
+
+}
+

@@ -1,0 +1,87 @@
+#include <iostream>
+
+using namespace std;
+
+
+void display(int a[],int size)
+{
+    for(int i=1;i<=size;i++)
+    {
+        cout<<a[i]<<"\t";
+    }
+    
+}
+
+int maximum(int a[],int size)
+{
+    int max;
+    
+    for(int i=1;i<=size;i++)
+    {
+        if(a[i]>max)
+        {
+            max=a[i];
+        }
+    }
+    
+    return max;
+    
+}
+
+void countsort(int a[],int size,int exp)
+{
+    int output[size];
+    int i,count[10]={0};
+    
+    for(int i=1;i<=size;i++)
+    {
+        count[(a[i]/exp)%10]=count[(a[i]/exp)%10]+1;
+    }
+    
+    for(int i=1;i<10;i++)
+    {
+        count[i]=count[i]+count[i-1];
+    }
+    
+    for(int i=size;i>=1;i--)
+    {
+        output[count[(a[i]/exp)%10]]=a[i];
+        count[(a[i]/exp)%10]--;
+    }
+    
+    for(int i=1;i<=size;i++)
+    {
+        a[i]=output[i];
+    }
+}
+
+void radixsort(int a[],int size)
+{
+    int max=maximum(a,size);
+    
+     for (int exp = 1; max / exp > 0; exp *= 10){
+         
+          countsort(a, size, exp);
+     }
+       
+
+}
+
+int main()
+{
+   int a[50],size;
+   
+   cout<<"Enter size of array : ";
+   cin>>size;
+   
+   cout<<"Enter elements of array : ";
+   for(int i=1;i<=size;i++)
+   {
+       cin>>a[i];
+   }
+   
+   radixsort(a,size);
+   display(a,size);
+   
+   
+}

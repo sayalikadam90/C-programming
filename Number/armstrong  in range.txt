@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    
+    int n,armstrong,orig,start,end;
+    int sum;
+
+    cout<<"Enter starting number : ";
+    cin>>start;
+    
+    
+    cout<<"Enter end number : ";
+    cin>>end;
+    
+    
+    for(int i=start;i<=end;i++){
+        
+        n=i;
+        armstrong=n;
+        sum=0;
+        
+        while(n>0){
+        
+        sum=sum+(n%10)*(n%10)*(n%10);
+        n=n/10;
+        
+        
+    }
+    
+    
+    if(sum==armstrong){
+        
+      cout<<sum<<endl;
+    }
+    
+
+    }
+    
+    
+    
+    return 0;
+    
+}

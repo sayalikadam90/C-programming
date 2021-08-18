@@ -1,0 +1,20 @@
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+
+
+int main(){
+    
+    
+    int num,multiplier;
+    cout<<"Enter a number : ";
+    cin>>num;
+    
+    for(multiplier=1;multiplier<=10;multiplier++){
+        
+        cout<<num<<"*"<<multiplier<<"="<<num*multiplier<<endl;
+        
+    }
+    
+    return 0;
+}

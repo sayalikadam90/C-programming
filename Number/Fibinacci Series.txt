@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int num;
+    int first=0;
+    int second=1;
+    int next=0;
+    
+    cout<<"Enter a number : ";
+    cin>>num;
+    
+  while(next<=num){
+        
+        cout<<next<<endl;
+        first=second;
+        second=next;
+        next=first+second;
+    } 
+    
+}

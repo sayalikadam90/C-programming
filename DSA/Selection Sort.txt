@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+
+
+int main(){
+    
+    int a[50],size,temp,min,i,j;
+    
+    cout<<"Enter size of array : ";
+    cin>>size;
+    
+    cout<<"Enter elements of array : "<<endl;
+    for(int i=1;i<=size;i++){
+        
+        cin>>a[i];
+    }
+    
+    cout<<"Before selection sort : ";
+    for(int i=1;i<=size;i++){
+        
+        cout<<"\t"<<a[i];
+    }
+    
+    for(int i=1;i<=size;i++){
+        
+         min=i;
+         
+        for(int j=i+1;j<=size;j++){
+            
+            if(a[j]<a[min]){
+                
+                min=j;
+            }
+        }
+        
+        temp=a[min];
+        a[min]=a[i];
+        a[i]=temp;
+    }
+    
+    
+    cout<<"\nAfter selection sort : ";
+    for(int i=1;i<=size;i++){
+        
+        cout<<"\t"<<a[i];
+    }
+}

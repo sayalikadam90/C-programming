@@ -1,0 +1,25 @@
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+
+int main()
+{
+    char a1,lowerc,upperc;
+    
+    lowerc=(a1=='a' || a1=='e' || a1== 'i' || a1== 'o' || a1=='u');
+    upperc=(a1=='A' || a1=='E' || a1=='I' || a1=='O' || a1=='U');
+    
+    cout<<"Enter character  : ";
+    cin>>a1;
+    
+    if(lowerc || upperc){
+        
+        cout<<"This is a vowel";
+    }
+    
+    else{
+        
+        cout<<"This is a constant";
+        
+    }
+}
