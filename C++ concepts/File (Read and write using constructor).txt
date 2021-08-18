@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+ 
+    // string st="sayali kadam";
+    // ofstream out("sample.txt");  //write operation
+    // out<<st;
+    
+    string st1;
+    ifstream in("sample.txt");   //read operation
+    in>>st1;
+    getline(in,st1);
+    cout<<st1;
+}
+
+
+
+
+
+
+*****************************************************************************
+
+#include <stdio.h>
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+// {
+    string name;
+    ofstream out("sample.txt");
+    
+    cout<<"Enter your name ";
+    cin>>name;
+    
+    out<<name<<" is my name";
+    out.close();                          //write operation
+    
+    
+    string name1;
+    ifstream in("sample.txt");
+    in>>name1;
+    getline(in,name1);
+    cout<<name1;
+    in.close();                        //read operation
+}
+
+

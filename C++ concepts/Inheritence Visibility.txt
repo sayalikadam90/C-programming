@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+class A{
+    
+    public:
+        int x;
+        
+    protected:
+        int y;
+
+    private:
+        int z;
+};
+
+
+class B : public A{
+    
+      //x is public
+      //y is protected
+      //z is private not accessible from A
+};
+
+class C : private A{
+    
+      // x is private
+      // y is protected
+      // z is private not accessible from A
+}
+
+class D : protected A{
+    
+    // x is private
+    // y is private
+    // z is not accessible from D
+}
+
+
+

@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+
+class shop{
+    
+    int itemid[100];
+    int itemprice[100];
+    int counter;
+    
+    public:
+       
+       void initcounter(void){counter=0;}
+       void setprice(void);
+       void displayprice(void);
+};
+
+void shop :: setprice(void){
+    
+    cout<<"Enter itemid : ";
+    cin>>itemid[counter];
+    cout<<"Enter itemprice : ";
+    cin>>itemprice[counter];
+    counter++;
+    
+}
+
+
+void shop :: displayprice(void){
+    
+    for(int i=0;i<counter;i++){
+    
+         cout<<"The price of itemid "<<itemid[i]<<" is "<<itemprice[i]<<endl;    
+    }
+    
+}
+
+
+int main()
+{
+   
+    shop s1;
+    s1. initcounter();
+    s1.setprice();
+    s1.displayprice();
+   
+}
+

@@ -1,0 +1,32 @@
+include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a[50],size;
+    int hash[123]={0};
+    int count=0;
+    
+    cout<<"Enter the size of element : ";
+    cin>>size;
+    
+    cout<<"Enter the elements of arary : ";
+    for(int i=1;i<=size;i++)
+    {
+        cin>>a[i];
+    }
+    
+    for(int i=1;i<=size;i++){
+        
+        if(hash[a[i]]==0)
+        {
+            hash[a[i]]=1;
+            cout<<a[i]<<"\t";
+            count++;
+            
+        }
+    }
+    
+}
+

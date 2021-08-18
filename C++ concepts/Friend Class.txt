@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+
+class sayali{
+  
+  int a;
+  
+  public:
+  
+  void setdata(void){
+  
+      cout<<"Enter value of a : ";
+      cin>>a;
+  }
+  
+  friend class pragati;
+  
+};
+
+class pragati{
+    
+    public:
+    
+    void showdata(sayali s){
+        
+        cout<<"HAHAHA i konw her private data : "<<s.a;
+    }
+};
+
+int main()
+{
+    sayali s1;
+    s1.setdata();
+    pragati p1;
+    p1.showdata(s1);
+   
+}

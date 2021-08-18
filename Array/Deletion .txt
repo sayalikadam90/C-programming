@@ -1,0 +1,41 @@
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+
+int main()
+{
+    
+    int a[50],position,size;
+    
+    cout<<"Enter size of array : ";
+    cin>>size;
+    
+    for(int i=0;i<size;i++){
+        
+        cout<<"Enter a number : ";
+        cin>>a[i];
+    }
+    
+    cout<<"Enter position : ";
+    cin>>position;
+    
+    if(position<=0 || position>size){
+        
+        cout<<"Invalid..";
+    }
+    
+    else{
+        
+        for(int i=position-1;i<size-1;i++){
+            
+            a[i]=a[i+1];
+        }
+        
+        size--;
+    }
+    
+    for(int i=0;i<=size;i++){
+        
+        cout<<a[i]<<endl;
+    }
+}

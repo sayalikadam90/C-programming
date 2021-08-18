@@ -1,0 +1,44 @@
+#include <iostream>
+
+using namespace std;
+
+class Number{
+
+    int a;
+    
+    public:
+    
+        Number(){
+            
+        }
+        
+        Number(int num){
+            
+            a=num;
+        }
+        
+        Number(Number &obj){
+            
+            a=obj.a;
+        }
+        
+        void display(){
+            
+            cout<<"The value of number "<<a<<endl;
+        }
+};
+
+int main()
+{
+    Number x(10),y;
+    x.display();
+    y.display();
+   
+    
+    Number z1(y);
+    z1.display();
+    
+   
+    
+}
+

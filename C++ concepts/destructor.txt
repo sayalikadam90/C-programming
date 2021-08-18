@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int count=0;
+
+class Number{
+   
+   public :
+   
+   Number(){
+       count++;
+       cout<<"This is the time when constructor is called for object number"<<count<<endl;
+   }
+   
+   ~Number(){
+      
+        cout<<"This is the time when destrctor is called for object number"<<count<<endl;
+        count--;
+   }
+   
+};
+
+int main()
+{
+    cout<<"We are inside our function "<<endl;
+    cout<<"We are creating first object "<<endl;
+    
+    Number n1;
+    {
+        
+        cout<<"We are inside block "<<endl;
+        cout<<"creating two objects "<<endl;
+        Number n2,n3;
+        cout<<"Exiting this block "<<endl;
+    }
+    
+     cout<<"Back to main"<<endl;
+   
+   
+   
+}
+

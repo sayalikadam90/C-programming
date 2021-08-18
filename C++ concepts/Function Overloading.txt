@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+
+/*******************************Function Overloading****************************/
+int sum(int a,int b){
+    
+    return a+b;
+}
+
+int sum(int a,int b,int c){
+    
+    return a+b+c;   
+}
+
+int main()
+{
+    int a,b,c;
+    cout<<"Sum of 3 and 6 is : "<<sum(3,6)<<endl;
+    cout<<"Sum of 3,3 and 2 is : "<<sum(3,3,2)<<endl;
+}
+
+
+
+
+/****************************Area using Function Overloading**************************/
+
+int Area(int l,int b){
+   
+   return l*b;    
+}
+
+int Area(int a){
+    
+    return a*a;
+}
+
+
+int main(){
+    int l,b,a;
+    int h;
+    cout<<"Area of rectangle is : "<<Area(10,20)<<endl;
+    cout<<"Area of square is : "<<Area(10)<<endl;
+   
+   
+    
+}

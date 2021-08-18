@@ -1,0 +1,159 @@
+#include <iostream>
+
+using namespace std;
+
+
+class Base1{
+
+    public:
+    
+        void greet()
+        {
+            cout<<"Hello world...."<<endl;
+        }
+};
+
+
+class Base2{
+    
+    public:
+    
+        void greet()
+        {
+            cout<<"Good Morning.."<<endl;
+        }
+};
+
+class Derived : public Base1,public Base2{
+    
+    int a;
+};
+
+int main()
+{
+    
+    Base1 b1;
+    b1.greet();  //Hello world....
+    
+    
+    Base2 b2;
+    b2.greet(); //Good Morning..
+    
+    Derived d;
+    d.greet();   //Ambiguity Error
+    
+    
+   
+}
+
+
+
+
+
+/*****************************************************************************************/
+
+#include <iostream>
+
+using namespace std;
+
+class Base1{
+
+    public:
+    
+        void greet()
+        {
+            cout<<"Hello world...."<<endl;
+        }
+};
+
+
+class Base2{
+    
+    public:
+    
+        void greet()
+        {
+            cout<<"Good Morning.."<<endl;
+        }
+};
+
+class Derived : public Base1,public Base2{
+    
+    int a;
+    
+    public:
+    
+         void greet()
+         {
+             Base2 :: greet();
+             
+         }
+};
+
+int main()
+{
+    
+    Base1 b1;
+    b1.greet();  //Hello world....
+    
+    
+    Base2 b2;
+    b2.greet(); //Good Morning..
+    
+    Derived d;
+    d.greet();   //Good Morning..
+    
+    
+   
+}
+
+
+
+
+
+/*********************************************************************************************************************/
+#include <iostream>
+
+using namespace std;
+
+
+
+class A{
+    
+    public:
+    
+       void say()
+       {
+           cout<<"I am sayali"<<endl;
+       }
+};
+
+class B : public A{
+    
+    public:
+    
+        void say(){
+            
+            cout<<"I am kunal"<<endl;
+        }
+};
+
+int main(){
+    
+    A a;
+    a.say(); //I am sayali
+    
+    B b;
+    b.say(); //I am kunal
+    
+}
+
+
+
+
+
+
+
+
+
+

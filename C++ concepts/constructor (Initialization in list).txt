@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+class Sayali{
+
+   int a;
+   int b;
+   
+   public:
+   
+    //   Sayali(int i,int j) : a(i),b(j)  // 10,20
+    //   Sayali(int i,int j) :a(i),b(i+j)   //10,30
+    //   Sayali(int i,int j) : a(i),b(2*j)    //10,40
+    //   Sayali(int i,int j):a(i),b(j+a)  //10,30
+    //   Sayali(int i, int j) : b(j), a(i+b)  //This is not a prorper way because we cant use b first when we have intialized a first
+       {   
+           cout<<"Constructor is called "<<endl;
+           cout<<"The value of a is "<<a<<endl;
+           cout<<"The value of b is "<<b<<endl;
+       }
+};
+
+int main()
+{
+    Sayali s(10,20);
+    
+}

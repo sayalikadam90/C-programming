@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+
+class Employee{
+
+   int id;
+   
+   public:
+      
+      void setdata(void);
+      void getdata(void);
+};
+
+void Employee :: setdata(void){
+    
+    cout<<"Enter id : ";
+    cin>>id;
+    
+}
+
+void Employee :: getdata(void){
+    
+    cout<<"The id of Employee "<<id<<endl;
+    
+}
+
+int main()
+{
+    Employee E[4];
+    
+    for(int i=0;i<4;i++){
+        
+        E[i].setdata();
+        E[i].getdata();
+        
+        
+    }
+    
+}

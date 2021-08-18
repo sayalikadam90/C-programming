@@ -1,0 +1,45 @@
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+
+int main()
+{
+    
+    int a[50],position,size,value;
+    
+    cout<<"Enter size of array : ";
+    cin>>size;
+    
+    for(int i=0;i<size;i++){
+        
+        cout<<"Enter a number : ";
+        cin>>a[i];
+    }
+    
+    cout<<"Enter position : ";
+    cin>>position;
+    
+    cout<<"Enter a value to insert : ";
+    cin>>value;
+    
+    if(position<=0 || position>size){
+        
+        cout<<"Invalid..";
+    }
+    
+    else{
+        
+        for(int i=size-1;i>=position-1;i--){
+            
+            a[i+1]=a[i];
+        }
+        
+        a[position-1]=value;
+        size++;
+    }
+    
+    for(int i=0;i<=size;i++){
+        
+        cout<<a[i]<<endl;
+    }
+}

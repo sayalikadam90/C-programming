@@ -1,0 +1,28 @@
+class Addition{
+   
+   int a,b;
+   
+   public:
+   
+   Addition(void);
+   
+   void display(void){
+       
+       cout<<"Addition is : "<<a+b;
+   }
+   
+};
+
+Addition :: Addition(void){
+    
+    a=10;
+    b=20;
+}
+
+
+int main()
+{
+    Addition a;
+    a.display();
+    
+}

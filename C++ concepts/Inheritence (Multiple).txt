@@ -1,0 +1,82 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+class Student1{
+    
+    int roll;
+    
+    public:
+    
+       void setdata(int a){
+           
+           roll=a;
+       }
+       
+       void getdata(){
+           
+           cout<<"Roll no of student1 is "<<roll<<endl;
+       }
+};
+
+class Student2{
+    
+    int roll1;
+    
+    public:
+    
+       void setdata1(int a){
+           
+           roll1=a;
+       }
+       
+       void getdata1(){
+           
+           cout<<"Roll no of student2 is "<<roll1<<endl;
+       }
+};
+
+class Student3{
+    
+    int roll2;
+    
+    public:
+    
+       void setdata2(int a){
+           
+           roll2=a;
+       }
+       
+       void getdata2(){
+           
+           cout<<"Roll no of student3 is "<<roll2<<endl;
+       }
+};
+
+
+class Division : public Student1 , public Student2 ,public Student3{
+  
+     public:
+      
+      void showdata(){
+          
+          getdata();
+      getdata1();
+      getdata2();
+      }
+      
+        
+};
+
+
+int main()
+{
+    
+    Division d;
+    d.setdata(1);
+    d.setdata1(2);
+    d.setdata2(3);
+    d.showdata();
+   
+}
+

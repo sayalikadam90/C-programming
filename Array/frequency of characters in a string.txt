@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    char str[50];
+    int frequency[256]={0};
+    
+    cout<<"Enter a string "<<endl;
+    gets(str);
+    
+    for(int i=0;str[i]!='\0';i++)
+    {
+        frequency[str[i]]++;
+    }
+    
+    for(int i=0;i<256;i++)
+    {
+        if(frequency[i]!=0)
+        {
+            cout<<"frequency of character "<<char(i)<<" is "<<frequency[i]<<endl;
+        }
+    }
+}

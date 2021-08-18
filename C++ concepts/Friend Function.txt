@@ -1,0 +1,93 @@
+#include <iostream>
+
+using namespace std;
+
+
+class integer{
+  
+  int a,b;
+  
+  public:
+  
+     void setdata(){
+         
+         cout<<"Enter value of a : ";
+         cin>>a;
+         cout<<"Enter value of b :";
+         cin>>b;
+     }
+     
+     friend int add(integer a1);
+};
+
+
+int add(integer a1){
+    
+    return int(a1.a+a1.b);
+}
+
+int main(){
+    
+    integer a2;
+    a2.setdata();
+    cout<<"Addition is : "<<add(a2);
+}
+
+
+
+
+****************************************************************************************************************
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+class B;
+
+class A{
+    
+    int data;
+    
+    public: 
+    
+    void setdata(int a){
+        
+       data=a;
+        
+    }
+    
+    friend void add(A,B);
+};
+
+class B{
+  
+  int value;
+  
+   public:
+   
+    void setdata(int b){
+      
+      value=b;
+   }
+  
+    friend void add(A ,B);
+};
+
+void add(A a1,B b1){
+    
+    cout<<"Addition of two numbers is : "<<a1.data+b1.value;
+}
+
+int main()
+{
+    A a2;
+    a2.setdata(50);
+    
+    B b2;
+    b2.setdata(20);
+    
+    add(a2,b2);
+    
+    
+}
+
+

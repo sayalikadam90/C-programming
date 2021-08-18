@@ -1,0 +1,61 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+
+class Science{
+    
+    public:
+      
+       void showdata(){
+           
+           cout<<"I am a Science Student "<<endl;
+       }
+};
+
+class Physics : public Science{
+  
+    public:
+     
+       void showdata1(){
+           
+           showdata();
+           cout<<"My fav subject is Physics "<<endl;
+       }
+};
+
+class Chemistry : public Science{
+    
+    public:
+    
+      void showdata2(){
+          
+          showdata();
+          cout<<"My fav subject is Chemistry "<<endl;
+      }
+};
+
+
+class Maths : public Science{
+    
+    public:
+    
+      void showdata3(){
+          
+          showdata();
+          cout<<"My fav subject is Maths "<<endl;
+      }
+};
+
+int main()
+{
+    Physics p;
+    p.showdata1();
+    
+    Chemistry c;
+    c.showdata2();
+    
+    Maths m;
+    m.showdata3();
+}
+

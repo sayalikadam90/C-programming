@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <iostream>
+#include <string.h>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+  
+  /**************************************Write operation using open*************************/
+  
+  
+  ofstream out;
+  out.open("sample.txt");
+  out<<"This is me"<<endl;
+  out<<"This is sayali"<<endl;
+  out<<"trying for placements"<<endl;  
+  out.close();
+  
+  
+
+/****************************************Read operation using open*****************************/ 
+  ifstream in;
+  string st;
+  in.open("sample.txt");
+  
+  while(in.eof()==0)
+  {
+      getline(in,st);
+      cout<<st<<endl;   //end of file is eof
+  }
+  
+}
