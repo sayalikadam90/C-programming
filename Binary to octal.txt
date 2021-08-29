@@ -1,0 +1,55 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+C#, VB, Perl, Swift, Prolog, Javascript, Pascal, HTML, CSS, JS
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int convert(long num)
+{
+    int i=0,sum=0,octal=0,rem;
+    
+    while(num!=0)
+    {
+        int rem=num%10;
+        sum=sum+rem*pow(2,i);
+        num=num/10;
+        i++;
+    }
+    
+    i=1;
+    
+    while(sum!=0)
+    {
+        rem=sum%8;
+        sum=sum/8;
+        octal=octal+rem*i;
+        i=i*10;
+    }
+    
+ 
+  return octal;
+}
+
+int main()
+{
+    long binary;
+    cout<<"Enter binary number : ";
+    cin>>binary;
+    cout<<"Conversion of binary num "<<binary<<" into "<<" decimal is "<<convert(binary);
+   
+}
+

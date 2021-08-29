@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int convert(long num)
+{
+    int i=1,sum=0;
+    
+   while(num!=0)
+   {
+       int rem=num%2;
+       sum=sum+rem*i;
+       num=num/2;
+       i=i*10;
+   }
+   
+   return sum;
+}
+
+int main()
+{
+    int decimal;
+    cout<<"Enter a decimal number ";
+    cin>>decimal;
+    
+    cout<<"Conversion of decimal number "<<decimal<<" to binary is "<<convert(decimal);
+}
