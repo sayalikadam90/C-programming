@@ -1,0 +1,29 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int convert(long num)
+{
+    int i=0,sum=0;
+    
+    while(num!=0)
+    {
+        int rem=num%10;
+        sum=sum+rem*pow(2,i);
+        num=num/10;
+        i++;
+    }
+    
+  return sum;
+}
+
+int main()
+{
+    long binary;
+    cout<<"Enter binary number : ";
+    cin>>binary;
+    
+    cout<<"Conversion of binary num "<<binary<<" into "<<" decimal is "<<convert(binary);
+   
+}
+

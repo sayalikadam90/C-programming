@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int p;
+    cout<<"Enter no of peoples : ";
+    cin>>p;
+    
+    int max=p*(p-1)/2;
+    cout<<"Number of handshakes are : "<<max;
+}
