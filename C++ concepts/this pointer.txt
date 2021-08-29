@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+class Integer
+{
+    int a;
+    
+    public:
+    
+        void setdata(int a)
+        {
+            // a=a if we try to do with same variable then it will give garbage value
+            this->a=a; //if we are using the same variable then use this pointer
+        }
+        
+        // Integer & setdata(int a)
+        // {
+        //     this->a=a;
+        //     return *this;
+        // }
+        
+        void getdata()
+        {
+            cout<<"The value of a is "<<a;
+        }
+    
+};
+
+int main()
+{
+    Integer i;
+    i.setdata(10);
+    i.getdata();
+    
+    // Integer i;
+    // i.setdata(10).getdata();
+   
+}

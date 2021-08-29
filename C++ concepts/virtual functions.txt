@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+class Base
+{
+  
+   int data1;
+   
+   public:
+   
+       void setdata(int data1)
+       {
+           this->data1=data1;
+       }
+       
+    //   void getdata()
+    //   {
+    //       cout<<"The value of base class is "<<data1<<endl;
+    //   }
+    
+        virtual void getdata()
+       {
+           cout<<"The value of base class is "<<data1<<endl;
+       }
+};
+
+class Derived :public Base
+{
+    int data2;
+    
+    public:
+    
+        void setdata(int data2)
+        {
+            this->data2=data2;
+        }
+        
+        void getdata()
+        {
+            cout<<"The value derived class is "<<data2<<endl;
+        }
+};
+
+int main()
+{
+   Derived obj;
+   Base *ptr=&obj;
+   (*ptr).setdata(10);
+   (*ptr).getdata();   //Derived class will be called because of virtual function
+   
+}

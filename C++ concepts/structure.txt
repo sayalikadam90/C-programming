@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+struct student{
+    
+    int id;
+    char gender;
+    float marks;
+};
+
+int main()
+{
+    struct student s1;
+    s1.id=1;
+    s1.gender='f';
+    s1.marks=20.4;
+    cout<<s1.id<<endl;
+    cout<<s1.gender<<endl;
+    cout<<s1.marks<<endl;
+}
