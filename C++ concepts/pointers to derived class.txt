@@ -1,0 +1,73 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+using namespace std;
+
+class Base
+{
+  
+   int data1;
+   
+   public:
+   
+       void setdata(int data1)
+       {
+           this->data1=data1;
+       }
+       
+       void getdata()
+       {
+           cout<<"The value of base class is "<<data1<<endl;
+       }
+};
+
+class Derived :public Base
+{
+    int data2;
+    
+    public:
+    
+        void setdata(int data2)
+        {
+            this->data2=data2;
+        }
+        
+        void getdata()
+        {
+            cout<<"The value derived class is "<<data2<<endl;
+        }
+};
+
+int main()
+{
+    Base obj1;
+    Base *ptr1=&obj1;
+    (*ptr1).setdata(10);
+    (*ptr1).getdata();   // base class pointer base class object
+    
+    Derived obj2;
+    Derived *ptr2=&obj2;
+    (*ptr2).setdata(20);
+    (*ptr2).getdata();   //Derived class pointer Derived class object
+    
+   
+    Derived obj4;
+    Base *ptr4=&obj4;
+    (*ptr4).setdata(30);
+    (*ptr4).getdata();   //Base class pointer Derived class object
+    
+    
+    // Base obj3;
+    // Derived *ptr3=&obj3;
+    // (*ptr3).setdata(30);
+    // (*ptr3).getdata();     //Derived class pointer Base class object
+    
+    
+}
+

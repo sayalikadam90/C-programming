@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a=4;
+    int *p=&a;
+    
+    cout<<a<<endl;  //4
+    cout<<*p<<endl;  //4
+    cout<<&a<<endl;  //address
+    cout<<p<<endl;    //address
+    
+    int a1[]={1,2,3,4};
+    int *q=&a;
+   
+    
+    cout<<a1<<endl; //base address
+    cout<<*q<<endl; //4
+    cout<<*(a1+1)<<endl;  //2
+    cout<<a1+1<<endl;  //base address+4 (100+4)
+    cout<<&a1+1<<endl;  //100+4(4)
+   
+}
+

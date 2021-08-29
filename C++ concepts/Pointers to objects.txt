@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+class Complex{
+  
+  int real,imaginary;
+    
+    public:
+    
+        void setdata(int r,int i)
+        {
+            real=r;
+            imaginary=i;
+        }
+        
+        void getdata()
+        {
+            cout<<"Real part is "<<real<<endl;
+            cout<<"Imaginary part is "<<imaginary<<endl;
+        }
+      
+};
+
+int main()
+{
+    /*******************Different Methods using pointers******************************/
+    
+    // Complex c;
+    // c.setdata(1,2);
+    // c.getdata();
+    
+    // Complex c1;
+    // Complex *ptr=&c1;
+    // (*ptr).setdata(10,20);
+    // (*ptr).getdata();
+    
+    
+    // Complex *ptr=new Complex;
+    // (*ptr).setdata(20,30);
+    // (*ptr).getdata();
+    
+    Complex *ptr=new Complex;
+    ptr->setdata(40,50);
+    ptr->getdata();
+    
+    
+}
