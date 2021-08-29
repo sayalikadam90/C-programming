@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+struct Node
+{
+    int data;
+    struct Node *next;
+};
+
+void display(Node *ptr)
+{
+    while(ptr!=NULL)
+    {
+        cout<<ptr->data<<"\t";
+        ptr=ptr->next;
+    }
+}
+
+struct Node *insertafterNode(struct Node *head,struct Node *prevnode,int data)
+{
+    Node *ptr=new Node();
+    ptr->data=data;
+    
+    ptr->next=prevnode->next;
+    prevnode->next=ptr;
+    
+    return head;
+    
+}
+
+int main()
+{
+   Node *head;
+   Node *second;
+   Node *third;
+   
+   head=new Node();
+   second=new Node();
+   third=new Node();
+   
+   head->data=10;
+   head->next=second;
+   
+   second->data=20;
+   second->next=third;
+   
+   third->data=30;
+   third->next=NULL;
+   
+   cout<<"Linked list before insertion : "<<endl;
+   display(head);
+   
+   head=insertafterNode(head,second,99);
+   
+   cout<<"\nLinked list after insertion : "<<endl;
+   display(head);
+}

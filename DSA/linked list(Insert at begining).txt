@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+struct Node
+{
+    int data;
+    struct Node *next;
+};
+
+void display(Node *ptr)
+{
+    while(ptr!=NULL)
+    {
+        cout<<ptr->data<<"\t";
+        ptr=ptr->next;
+    }
+}
+
+struct Node *insertatbegining(struct Node *head,int data)
+{
+    Node *ptr=new Node();
+    ptr->next=head;
+    ptr->data=data;
+    
+    return ptr;
+    
+}
+
+int main()
+{
+   Node *head;
+   Node *second;
+   Node *third;
+   
+   head=new Node();
+   second=new Node();
+   third=new Node();
+   
+   head->data=10;
+   head->next=second;
+   
+   second->data=20;
+   second->next=third;
+   
+   third->data=30;
+   third->next=NULL;
+   
+   display(head);
+   
+   head=insertatbegining(head,56);
+   
+   display(head);
+}

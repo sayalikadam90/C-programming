@@ -1,0 +1,64 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+struct Node
+{
+    int data;
+    struct Node *next;
+};
+
+void display(Node *ptr)
+{
+    while(ptr!=NULL)
+    {
+        cout<<ptr->data<<"\t";
+        ptr=ptr->next;
+    }
+}
+
+struct Node *insertatEnd(struct Node *head,int data)
+{
+    Node *ptr=new Node();
+    Node *p=head;
+    ptr->data=data;
+    
+    while(p->next!=NULL)
+    {
+      p=p->next;   
+    }
+    
+    p->next=ptr;
+    ptr->next=NULL;
+    
+    return head;
+    
+}
+
+int main()
+{
+   Node *head;
+   Node *second;
+   Node *third;
+   
+   head=new Node();
+   second=new Node();
+   third=new Node();
+   
+   head->data=10;
+   head->next=second;
+   
+   second->data=20;
+   second->next=third;
+   
+   third->data=30;
+   third->next=NULL;
+   
+   cout<<"Linked list before insertion : "<<endl;
+   display(head);
+   
+   head=insertatEnd(head,99);
+   
+   cout<<"\nLinked list after insertion : "<<endl;
+   display(head);
+}
