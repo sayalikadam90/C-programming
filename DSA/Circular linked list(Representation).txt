@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+struct Node
+{
+    int data;
+    Node *next;
+    
+};
+
+void display(Node *head)
+{
+    struct Node *ptr=head;
+    
+    do
+    {
+      cout<<ptr->data<<"\t";
+      ptr=ptr->next;  
+    }
+    
+    while(ptr!=head);
+}
+
+int main()
+{
+    Node *head;
+    Node *second;
+    Node *third;
+    
+    head=new Node();
+    second=new Node();
+    third=new Node();
+    
+    head->data=10;
+    head->next=second;
+    
+    second->data=20;
+    second->next=third;
+    
+    third->data=30;
+    third->next=head;
+    
+    display(head);
+}
