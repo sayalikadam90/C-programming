@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int prime(int num)
+{
+   int count=0;
+   
+   for(int i=1;i<=num;i++)
+   {
+       if(num%i==0)
+       {
+           count++;
+       }
+   }
+   
+   if(count==2)
+   {
+       return 1;
+   }
+   
+   else
+   {
+       return 0;
+   }
+}
+
+int main()
+{
+    int num;
+    int check=0;
+    
+    cout<<"Enter a number : ";
+    cin>>num;
+    
+    for(int i=1;i<=num/2;i++)
+    {
+        if(prime(i))
+        {
+            if(prime(num-i))
+            {
+                cout<<num<<" = "<<i<<" + "<<num-i<<endl;
+                check=1;
+                
+            }
+        }
+    }
+    
+    if(check==0)
+    {
+        cout<<"cannot be expressed as sum of prime numbers ";
+    }
+    
+}
