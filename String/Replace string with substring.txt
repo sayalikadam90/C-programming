@@ -1,0 +1,78 @@
+#include<stdio.h>
+#include<string.h>
+#include <iostream>
+using namespace std;
+
+void replacestring(char string[],char substring[],char newsubstring[])
+{
+    int stringlen,substringlen,newsubstringlen;
+    int flag=0,start,end,i,j,k;
+    stringlen=strlen(string);
+    substringlen=strlen(substring);
+    newsubstringlen=strlen(newsubstring);
+    
+    for(i=0;i<stringlen;i++)
+    {
+        flag=0;
+        start=i;
+        
+        for(j=0;string[i]==substring[j];i++,j++)
+        {
+            if(j==substringlen-1)
+            {
+                flag=1;
+            }
+        }
+        
+        end=i;
+        if(flag==0)
+        {
+            i-=j;
+        }
+        
+        else
+        {
+            for(j=start;j<end;j++)
+            {
+                for(k=start;k<stringlen;k++)
+                {
+                    string[k]=string[k+1];
+                }
+                
+                stringlen--;
+                i--;
+            }
+            
+            for(j=start;j<start+newsubstringlen;j++)
+            {
+                for(k=stringlen;k>=j;k--)
+                {
+                    string[k+1]=string[k];
+                }
+                    
+                string[j]=newsubstring[j-start];
+                stringlen++;
+                i++;
+            }
+        }
+    }
+    
+}
+
+int main()
+{
+    char string[50],substring[50],newsubstring[50];
+    
+    cout<<"\nEnter a string : "<<endl;
+    gets(string);
+    
+    cout<<"\nEnter substring : "<<endl;
+    gets(substring);
+    
+    cout<<"\nEnter newsubstring : "<<endl;
+    gets(newsubstring);
+    
+    replacestring(string,substring,newsubstring);
+    
+    cout<<"The string after replacing substring : "<<string<<endl;
+}
