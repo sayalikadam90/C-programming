@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <iostream>
+#include <string.h>
+#include <ctype.h>
+using namespace std;
+
+
+int main()
+{
+   char str[50];
+   int freq[256]={0};
+   
+   cout<<"Enter a string : ";
+   gets(str);
+   
+   for(int i=0;str[i]!='\0';i++)
+   {
+       freq[str[i]]++;
+   }
+   
+   for(int i=0;i<256;i++)
+   {
+       if(freq[i]!=0)
+       {
+           
+           cout<<"The freq of "<<char(i)<<" is "<<freq[i]<<endl;
+       }
+   }
+}
