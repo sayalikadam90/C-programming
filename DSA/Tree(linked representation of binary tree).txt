@@ -1,0 +1,53 @@
+#include <iostream>
+
+using namespace std;
+
+struct Node
+{
+    int data;
+    Node *left;
+    Node *right;
+};
+
+void display(Node *root)
+{
+    Node *ptr=root;
+    
+     if(ptr!=NULL)
+    {
+       cout<<ptr->data<<"\t";
+       display(ptr->left);
+       display(ptr->right);
+    }
+    
+}
+
+int main()
+{
+    //constructing root Node
+    Node *root;
+    root=new Node();
+    root->data=10;
+    root->left=NULL;
+    root->right=NULL;
+    
+    //constructing second Node
+    Node *second;
+    second=new Node();
+    second->data=20;
+    second->left=NULL;
+    second->right=NULL;
+    
+    //constructing third Node
+    Node *third;
+    third=new Node();
+    third->data=30;
+    third->left=NULL;
+    third->right=NULL;
+    
+    root->left=second;
+    root->right=third;
+    
+    display(root);
+    
+}
