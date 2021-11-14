@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+void moveHash(char str[])
+{
+    int i=strlen(str)-1;
+    for(int j=i;j>=0;j--)
+    {
+        if(str[j]!='#')
+        {
+            swap(str[i--],str[j]);
+        }
+    }
+
+}
+
+int main()
+{
+   char str[100];
+   
+   cout<<"Enter string : ";
+   cin>>str;
+   
+   moveHash(str);
+   
+   cout<<str;
+}
